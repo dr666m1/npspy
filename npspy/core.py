@@ -2,8 +2,10 @@ from typing import Dict, Iterable, Literal
 
 Categories = Literal["detractor", "passive", "promoter"]
 
+
 class InvalidAnswerError(Exception):
     """Class for invalid answer related errors."""
+
     pass
 
 

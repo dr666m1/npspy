@@ -1,6 +1,7 @@
 import pytest
 from npspy import InvalidAnswerError, categorize, calculate
 
+
 def test_categorize_negative():
     with pytest.raises(InvalidAnswerError):
         categorize(-1)
@@ -40,7 +41,7 @@ def test_calculate_0():
 
 
 def test_calculate_33():
-    assert calculate([7, 8, 9]) == 1/3 * 100
+    assert calculate([7, 8, 9]) == 1 / 3 * 100
 
 
 def test_calculate_100():
