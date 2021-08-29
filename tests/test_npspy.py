@@ -33,7 +33,7 @@ def test_categorize_10():
 
 def test_categorize_more_than_10():
     with pytest.raises(InvalidAnswerError):
-        assert categorize(11)
+        categorize(11)
 
 
 def test_calculate_0():
