@@ -1,9 +1,13 @@
+from typing import Dict, Iterable, Literal
+
+Categories = Literal["detractor", "passive", "promoter"]
+
 class InvalidAnswerError(Exception):
     """Class for invalid answer related errors."""
     pass
 
 
-def categorize(answer):
+def categorize(answer: int) -> Categories:
     """Categorize an answwer for the NPS question.
     Args:
         answer: An answer for the NPS question.
@@ -22,14 +26,14 @@ def categorize(answer):
         raise InvalidAnswerError(f"Invalid answer: {answer}")
 
 
-def calculate(answers):
+def calculate(answers: Iterable[int]) -> float:
     """Calculates nps.
     Args:
         answers: Answers for the NPS question.
     Returns:
         Calculated nps.
     """
-    count = {}
+    count: Dict[Categories, int] = {}
     for answer in answers:
         category = categorize(answer)
         count[category] = count.get(category, 0) + 1
