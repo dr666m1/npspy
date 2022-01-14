@@ -10,7 +10,7 @@ class InvalidAnswerError(Exception):
 
 
 def categorize(answer: int) -> Categories:
-    """Categorize an answwer for the NPS question.
+    """Categorize an answer for the NPS question.
     Args:
         answer: An answer for the NPS question.
     Returns:
